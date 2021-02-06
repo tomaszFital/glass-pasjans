@@ -1,0 +1,17 @@
+@import "./../../styles/variables.scss";
+
+.card {
+    align-items: center;
+    justify-content: center;
+    p {
+        margin: 0;
+        font-size: 3rem;
+    }
+}
+
+
+.black-card {  color: $color-black-1; }
+.red-card { color: $color-red-1;  }
+.blue-card { color: $color-blue-1; }
+
+.hidden-card-border { border: 1px solid $color-yellow-1; }

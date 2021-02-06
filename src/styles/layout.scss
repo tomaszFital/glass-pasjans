@@ -17,3 +17,24 @@
 .space {
     flex: 1;
 }
+ 
+.glass {
+    background: linear-gradient(to right bottom, $color-white-transparent-1, $color-white-transparent-2);
+    border: 1px solid $color-white-1;   
+    backdrop-filter: blur(0.5rem);
+}
+.glass-2 {
+    background: linear-gradient(to right bottom, $color-white-transparent-2, $color-white-transparent-3);
+    border: 1px solid $color-white-1;   
+    backdrop-filter: blur(0.5rem);
+}
+
+.pattern {
+    background: linear-gradient(to right bottom , $color-yellow-1, $color-green-1);
+}
+
+.card-field {
+    width: 7rem;
+    height: 10rem;
+    border-radius: 12px;
+}

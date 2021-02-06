@@ -1,0 +1,8 @@
+<div class="row card-field card glass-2 clickable" [ngClass]="cardColour" *ngIf="!cardHidden; else hiddenCard"
+    (click)="cardHidden = true">
+    <p>{{ cardValue }}</p>
+    <p>{{ cardSymbol }}</p>
+</div>
+<ng-template #hiddenCard>
+    <div class="card-field card pattern clickable hidden-card-border" (click)="cardHidden = false"></div>
+</ng-template>

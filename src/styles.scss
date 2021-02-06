@@ -13,5 +13,5 @@ body, html {
 }
 
 body {
-    background: linear-gradient(to bottom right, $color-yellow-1, $color-green-1);
+    @extend .pattern;
 }
