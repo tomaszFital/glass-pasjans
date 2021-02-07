@@ -1,3 +1,17 @@
-<div class="board row">
-    <app-deck [cards]="cards"></app-deck>
+<div class="board column">
+    <div class="row">
+        <app-deck class="spaced-l" [cards]="deckCards"></app-deck>
+        <div class="fake-card spaced-l"></div>
+        <app-stack [allVisable]="true" class="spaced-l"></app-stack>
+        <app-stack [allVisable]="true" class="spaced-l"></app-stack>
+        <app-stack [allVisable]="true" class="spaced-l"></app-stack>
+        <app-stack [allVisable]="true" class="spaced-l"></app-stack>
+    </div>
+    <div class="row spaced-t">
+        <app-stack [allVisable]="true" class="spaced-l" *ngFor="let colCards of columnCards" [cards]="colCards"
+            [showAll]="true">
+        </app-stack>
+
+    </div>
+
 </div>

@@ -7,9 +7,23 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DeckComponent implements OnInit {
   @Input() cards: any[] = [];
+  deckCards: any[] = [];
+  shownCards: any[] = [];
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.deckCards = this.cards;
+  }
+
+  showCard(): void {
+    if (this.deckCards.length)
+      this.shownCards.push(this.deckCards.pop());
+    else {
+      this.deckCards = this.shownCards.reverse();
+      this.shownCards = [];
+    }
+
   }
 
 }

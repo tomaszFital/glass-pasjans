@@ -1,0 +1,13 @@
+<div *ngIf="showAll">
+    <div *ngFor="let card of cards; let i = index">
+        <div class="stacked-card" *ngIf="i!=0">
+            <app-card [visible]="false"></app-card>
+        </div>
+    </div>
+</div>
+
+<app-card *ngIf="cards.length; else emptyField" [card]="cards[cards.length - 1]" [visible]="allVisable"></app-card>
+
+<ng-template #emptyField>
+    <app-empty-field></app-empty-field>
+</ng-template>

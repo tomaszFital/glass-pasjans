@@ -1,0 +1,6 @@
+@import "./../../styles/variables.scss";
+
+.empty-field {
+    border: 1px solid $color-white-1;
+    background: $color-white-transparent-2;
+}

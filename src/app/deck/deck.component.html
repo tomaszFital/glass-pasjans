@@ -1,3 +1,4 @@
 <div class="row">
-    <app-card *ngFor="let card of cards" [card]="card"></app-card>
+    <app-stack (click)="showCard()" [cards]="deckCards" [allVisable]="false"></app-stack>
+    <app-stack class="spaced-l" [cards]="shownCards" [allVisable]="true"></app-stack>
 </div>

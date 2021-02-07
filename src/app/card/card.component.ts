@@ -9,13 +9,12 @@ export class CardComponent {
   cardValue: string;
   cardColour: "red-card" | "black-card" | "blue-card" = "blue-card";
   cardSymbol: string;
-  cardHidden: boolean;
+  @Input() visible: boolean;
 
   @Input() set card(card: any) {
-    const cardValue: string[] = ["J", "A", "2", "3", "4", "5", "6", "7", "8", "9", " W", "Q", "K"];
+    const cardValue: string[] = ["J", "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "W", "Q", "K"];
     const cardSymbol: string[] = ["♥", "♦", "♠", "♣"];
 
-    this.cardHidden = card.hidden;
     this.cardValue = cardValue[card.value];
 
     if (this.cardValue === "J") return;
